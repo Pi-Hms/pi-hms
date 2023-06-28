@@ -1,8 +1,10 @@
 import React from "react";
+import { InPatientN } from "../../NavBar/InPatientN";
 
 export const InPatient = () => {
   return (
     <div>
+      <InPatientN />
       <div className="mt-1">
         <div className="container1">
           <div className="add_btn mt-2 mb-2">

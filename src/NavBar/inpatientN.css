@@ -1,0 +1,16 @@
+.navbar {
+  margin: 0;
+}
+#navbarColor03 {
+  background-color: white; /* Replace #ff0000 with your desired color value */
+}
+.btn-secondary {
+  background-color: #8210f5; /* Replace #ff0000 with your desired color value */
+  border-radius: 10px;
+  border-color: #8210f5;
+  color: white;
+}
+.container1 {
+  padding-left: 0;
+  padding-right: 0;
+}
