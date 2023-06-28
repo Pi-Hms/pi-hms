@@ -2,7 +2,7 @@
 import React from "react";
 import "./main.css";
 import { Outlet, useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Main = () => {
   const navigate = useNavigate();
@@ -62,14 +62,15 @@ export const Main = () => {
             className="modules-button"
             onClick={() => handleNavigation("/inpatient")}
           >
-          InPatient
+            InPatient
           </button>
           <button
             className="modules-button"
             onClick={() => handleNavigation("/inventory")}
           >
             Inventory
-          </button><button
+          </button>
+          <button
             className="modules-button"
             onClick={() => handleNavigation("/masters")}
           >
