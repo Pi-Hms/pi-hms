@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./main.css";
 import { Outlet, useNavigate } from "react-router-dom";
-<<<<<<< HEAD
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlaskVial } from "@fortawesome/free-solid-svg-icons";
@@ -18,10 +17,11 @@ import {
   faPrescriptionBottleAlt,
   faShieldAlt,
   faUsers,
+  faBroom,
+  faMoneyBill,
+  faChevronDown,
+  faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
-=======
-//import "bootstrap/dist/css/bootstrap.min.css";
->>>>>>> 99558df13a10a533f843a056f8d5dd81f21f1064
 
 export const Main = () => {
   const navigate = useNavigate();
@@ -39,7 +39,6 @@ export const Main = () => {
       <div className="leftcontainer">
         <div className="leftcontainerheader">PI-HMS</div>
         <div className="modulelist">
-<<<<<<< HEAD
           <div className="modules">
             <p
               className="modules-p"
@@ -115,7 +114,7 @@ export const Main = () => {
               onClick={() => handleNavigation("/housekeeping")}
             >
               <span className="modules-icon">
-                {/* <FontAwesomeIcon icon={faMop } /> */}
+                {<FontAwesomeIcon icon={faBroom} />}
               </span>
               <span className="modules-title">HouseKeeping</span>
             </p>
@@ -156,80 +155,19 @@ export const Main = () => {
           </div>
           <div className="modules">
             <p
-            className="modules-p"
-=======
-          <button
-            className="modules-button"
-            onClick={() => handleNavigation("/appointment")}
-          >
-            Appointment
-          </button>
-          <button
-            className="modules-button"
-            onClick={() => handleNavigation("/communication")}
-          >
-            Communication
-          </button>
-          <button
-            className="modules-button"
-            onClick={() => handleNavigation("/diagnostic")}
-          >
-            Diagnostic
-          </button>
-          <button
-            className="modules-button"
-            onClick={() => handleNavigation("/doctorconsultation")}
-          >
-            DoctorConsultation
-          </button>
-          <button
-            className="modules-button"
-            onClick={() => handleNavigation("/finance")}
-          >
-            Finance
-          </button>
-          <button
-            className="modules-button"
-            onClick={() => handleNavigation("/general")}
-          >
-            General
-          </button>
-          <button
-            className="modules-button"
-            onClick={() => handleNavigation("/housekeeping")}
-          >
-            HouseKeeping
-          </button>
-          <button
-            className="modules-button"
-            onClick={() => handleNavigation("/inpatient")}
-          >
-            InPatient
-          </button>
-          <button
-            className="modules-button"
-            onClick={() => handleNavigation("/inventory")}
-          >
-            Inventory
-          </button>
-          <button
-            className="modules-button"
-            onClick={() => handleNavigation("/masters")}
-          >
-            Masters
-          </button>
-          <button
-            className="modules-button"
->>>>>>> 99558df13a10a533f843a056f8d5dd81f21f1064
-            onClick={() => handleNavigation("/opbilling")}
+              className="modules-p"
+              onClick={() => handleNavigation("/opbilling")}
             >
-            <span className="modules-icon">
-              <FontAwesomeIcon icon={faFlaskVial} />
-            </span>
+              <span className="modules-icon">
+                <FontAwesomeIcon icon={faMoneyBill} />
+              </span>
 
-            <span className="modules-title" onClick={toggleDropdown}>
-              OpBilling
-            </span>
+              <span className="modules-title" onClick={toggleDropdown}>
+                OpBilling <span className="dropdown-icon">
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
+              </span>
+              
             </p>
             {isDropdownOpen && (
               <div className="dropdown-content">
@@ -261,27 +199,24 @@ export const Main = () => {
             </p>
           </div>
           <div className="modules">
-  <p
-    className="modules-p"
-    onClick={() => handleNavigation("/security")}
-  >
-    <span className="modules-icon">
-      <FontAwesomeIcon icon={faShieldAlt} />
-    </span>
-    <span className="modules-title">Security</span>
-  </p>
-</div>
-<div className="modules">
-  <p
-    className="modules-p"
-    onClick={() => handleNavigation("/staff")}
-  >
-    <span className="modules-icon">
-      <FontAwesomeIcon icon={faUsers} />
-    </span>
-    <span className="modules-title">Staff</span>
-  </p>
-</div>
+            <p
+              className="modules-p"
+              onClick={() => handleNavigation("/security")}
+            >
+              <span className="modules-icon">
+                <FontAwesomeIcon icon={faShieldAlt} />
+              </span>
+              <span className="modules-title">Security</span>
+            </p>
+          </div>
+          <div className="modules">
+            <p className="modules-p" onClick={() => handleNavigation("/staff")}>
+              <span className="modules-icon">
+                <FontAwesomeIcon icon={faUsers} />
+              </span>
+              <span className="modules-title">Staff</span>
+            </p>
+          </div>
         </div>
       </div>
       <div className="rightcontainer">
