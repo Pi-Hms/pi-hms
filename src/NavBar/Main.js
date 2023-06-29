@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./main.css";
 import { Outlet, useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlaskVial } from "@fortawesome/free-solid-svg-icons";
@@ -18,6 +19,9 @@ import {
   faShieldAlt,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
+=======
+//import "bootstrap/dist/css/bootstrap.min.css";
+>>>>>>> 99558df13a10a533f843a056f8d5dd81f21f1064
 
 export const Main = () => {
   const navigate = useNavigate();
@@ -35,6 +39,7 @@ export const Main = () => {
       <div className="leftcontainer">
         <div className="leftcontainerheader">PI-HMS</div>
         <div className="modulelist">
+<<<<<<< HEAD
           <div className="modules">
             <p
               className="modules-p"
@@ -152,6 +157,70 @@ export const Main = () => {
           <div className="modules">
             <p
             className="modules-p"
+=======
+          <button
+            className="modules-button"
+            onClick={() => handleNavigation("/appointment")}
+          >
+            Appointment
+          </button>
+          <button
+            className="modules-button"
+            onClick={() => handleNavigation("/communication")}
+          >
+            Communication
+          </button>
+          <button
+            className="modules-button"
+            onClick={() => handleNavigation("/diagnostic")}
+          >
+            Diagnostic
+          </button>
+          <button
+            className="modules-button"
+            onClick={() => handleNavigation("/doctorconsultation")}
+          >
+            DoctorConsultation
+          </button>
+          <button
+            className="modules-button"
+            onClick={() => handleNavigation("/finance")}
+          >
+            Finance
+          </button>
+          <button
+            className="modules-button"
+            onClick={() => handleNavigation("/general")}
+          >
+            General
+          </button>
+          <button
+            className="modules-button"
+            onClick={() => handleNavigation("/housekeeping")}
+          >
+            HouseKeeping
+          </button>
+          <button
+            className="modules-button"
+            onClick={() => handleNavigation("/inpatient")}
+          >
+            InPatient
+          </button>
+          <button
+            className="modules-button"
+            onClick={() => handleNavigation("/inventory")}
+          >
+            Inventory
+          </button>
+          <button
+            className="modules-button"
+            onClick={() => handleNavigation("/masters")}
+          >
+            Masters
+          </button>
+          <button
+            className="modules-button"
+>>>>>>> 99558df13a10a533f843a056f8d5dd81f21f1064
             onClick={() => handleNavigation("/opbilling")}
             >
             <span className="modules-icon">
