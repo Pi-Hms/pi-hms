@@ -45,11 +45,19 @@ export const Main = () => {
               onClick={() => handleNavigation("/appointment")}
             >
               <span className="modules-icon">
-                {" "}
                 <FontAwesomeIcon icon={faCalendar} />
               </span>
               <span className="modules-title">Appointment</span>
+
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
           </div>
 
           <div className="modules">
@@ -57,9 +65,19 @@ export const Main = () => {
               className="modules-p"
               onClick={() => handleNavigation("/communication")}
             >
-              <FontAwesomeIcon icon={faComment} className="modules-icon" />
-              Communication
+              <span className="modules-icon">
+              <FontAwesomeIcon icon={faComment}  />
+              </span>
+              <span className="modules-title"> Communication </span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
           </div>
 
           <div className="modules">
@@ -71,7 +89,15 @@ export const Main = () => {
                 <FontAwesomeIcon icon={faFlaskVial} />
               </span>
               <span className="modules-title">Diagnostic</span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
           </div>
           <div className="modules">
             <p
@@ -81,8 +107,16 @@ export const Main = () => {
               <span className="modules-icon">
                 <FontAwesomeIcon icon={faStethoscope} />
               </span>
-              <span className="modules-title">DoctorConsultation</span>
+              <span className="modules-title">Consultation</span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
           </div>
 
           <div className="modules">
@@ -94,7 +128,15 @@ export const Main = () => {
                 <FontAwesomeIcon icon={faMoneyBillWave} />
               </span>
               <span className="modules-title">Finance</span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
           </div>
           <div className="modules">
             <p
@@ -105,7 +147,15 @@ export const Main = () => {
                 <FontAwesomeIcon icon={faCog} />
               </span>
               <span className="modules-title">General</span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
           </div>
 
           <div className="modules">
@@ -117,6 +167,9 @@ export const Main = () => {
                 {<FontAwesomeIcon icon={faBroom} />}
               </span>
               <span className="modules-title">HouseKeeping</span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
           </div>
 
@@ -129,7 +182,15 @@ export const Main = () => {
                 <FontAwesomeIcon icon={faHospital} />
               </span>
               <span className="modules-title">InPatient</span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
           </div>
           <div className="modules">
             <p
@@ -140,7 +201,15 @@ export const Main = () => {
                 <FontAwesomeIcon icon={faBoxOpen} />
               </span>
               <span className="modules-title">Inventory</span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
           </div>
           <div className="modules">
             <p
@@ -151,7 +220,16 @@ export const Main = () => {
                 <FontAwesomeIcon icon={faClipboardList} />
               </span>
               <span className="modules-title">Masters</span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
+
           </div>
           <div className="modules">
             <p
@@ -163,9 +241,10 @@ export const Main = () => {
               </span>
 
               <span className="modules-title" onClick={toggleDropdown}>
-                OpBilling <span className="dropdown-icon">
-              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+                OpBilling 
               </span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
               </span>
               
             </p>
@@ -185,7 +264,15 @@ export const Main = () => {
                 <FontAwesomeIcon icon={faUser} />
               </span>
               <span className="modules-title">Patient</span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
           </div>
           <div className="modules">
             <p
@@ -196,7 +283,15 @@ export const Main = () => {
                 <FontAwesomeIcon icon={faPrescriptionBottleAlt} />
               </span>
               <span className="modules-title">Pharmacy</span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
           </div>
           <div className="modules">
             <p
@@ -207,7 +302,15 @@ export const Main = () => {
                 <FontAwesomeIcon icon={faShieldAlt} />
               </span>
               <span className="modules-title">Security</span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
           </div>
           <div className="modules">
             <p className="modules-p" onClick={() => handleNavigation("/staff")}>
@@ -215,7 +318,15 @@ export const Main = () => {
                 <FontAwesomeIcon icon={faUsers} />
               </span>
               <span className="modules-title">Staff</span>
+              <span className="dropdown-icon" onClick={toggleDropdown}>
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronUp : faChevronDown} />
+              </span>
             </p>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <p>This is the dropdown content.</p>
+              </div>
+            )}
           </div>
         </div>
       </div>

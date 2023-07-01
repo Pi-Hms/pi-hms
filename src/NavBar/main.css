@@ -6,7 +6,7 @@
   
   .leftcontainer {
     width: 15vw;
-    height: 100vh;
+    height: fit-content;
     background-color: #1e1e2d;
     color: white;
   }
@@ -34,31 +34,47 @@
     border-radius: 20px;
   } */
   
-  .modules{
-    display: block;
-    
+  .modules {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-   
-    width: 12vw;
+    width: 13vw;
     font-size: medium;
-    
-    border-radius: 20px;
     background-color: #1e1e2d;
-    color: #9D9DA6;
-}
-.modules-p:hover {
+    color: #9d9da6;
   
-  border-color: #2c2c42;
-  color: white;
-}
-   .icon{
-    margin-right: 13px;
-   }
-   .modules-icon {
-    margin-right: 13px; /* Adjust the margin as needed */
   }
-  .dropdown-icon{
+  
+  .modules-p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .modules-p:hover {
+    border-color: #2c2c42;
+    color: white;
+  }
+  
+  .modules-icon {
+    margin-right: 13px;
+  }
+  
+  .modules-title {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+  
+  .dropdown-icon {
     margin-left: 1vw;
+  }
+  .dropdown-content{
+    display: flex;
   }
   
   
